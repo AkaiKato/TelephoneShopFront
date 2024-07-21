@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <title>TelephoneShop!</title>
+    <link rel="stylesheet" href="../CSS/Index.css">
+</head>
+
+<body>
+    <button type="button" onclick="toIndex()">Telephones</button>
+    <button type="button" onclick="toCatalog()">Catalogs</button>
+    <br></br>        
+    <button type="button" onclick="changeVisibilityCity('create')">Create City</button>
+    <button type="button" onclick="changeVisibilityCity('update')">Update City</button>
+    <button type="button" onclick="changeVisibilityCity('delete')">Delete City</button>
+    <br></br>
+    <table class="mainTable">
+        <tr>
+            <th>Name</th>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <div class="createCity">
+        <label for="createCityInput">City name:</label>
+        <input type="text" id="createCityInput" name="createCityInput">
+        <br></br>
+        <button type="button" onclick="createCityRequest()">Create City Request</button>
+        <br></br>
+    </div>
+
+    <div class="updateCity">
+        <label for="city">Choose City:</label>
+        <select class="selectCityUpdate" id="city">
+        </select>
+        <br></br>
+        <label for="updateCityInput">New City name:</label>
+        <input type="text" id="updateCityInput" name="updateCityInput">
+        <br></br>
+        <button type="button" onclick="updateCityRequest()">Update City Request</button>
+        <br></br>
+    </div>
+
+    <div class="deleteCity">
+        <label for="city">Choose City:</label>
+        <select class="selectCityDelete" id="city">
+        </select>
+        <br></br>
+        <button type="button" onclick="deleteCityRequest()">Delete City Request</button>
+    </div>
+
+    <script src="../JS/City.js"></script>
+    <script src="../JS/Navigation.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/createRow.js"></script>
+
+</body>
+
+</html>

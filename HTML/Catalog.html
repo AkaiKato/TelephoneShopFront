@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <title>TelephoneShop!</title>
+    <link rel="stylesheet" href="../CSS/Index.css">
+</head>
+
+<body>
+    <button type="button" onclick="toCity()">Cities</button>
+    <button type="button" onclick="toIndex()">Telephones</button>
+
+    <br></br>        
+
+    <button type="button" onclick="changeVisibilityCatalog('create')">Create Catalog</button>
+    <button type="button" onclick="changeVisibilityCatalog('update')">Update Catalog</button>
+    <button type="button" onclick="changeVisibilityCatalog('delete')">Delete Catalog</button>
+
+    <br></br>
+
+    <table class="mainTable">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Parent Catalog</th>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <div class="createCatalog">
+        <label for="createCatalogInput">Catalog name:</label>
+        <input type="text" id="createCatalogInput" name="createCatalogInput">
+        <br></br>
+        <label for="createCatalogDescriptionInput">Catalog Description:</label>
+        <input type="text" id="createCatalogDescriptionInput" name="createCatalogDescriptionInput">
+        <br></br>
+        <label for="newSelectCatalogCreate">Parent Catalog:</label>
+        <select class="newSelectCatalogCreate" id="newSelectCatalogCreate">
+            <option value='null'></option>
+        </select>
+        <br></br>
+        <button type="button" onclick="createCatalogRequest()">Create Catalog Request</button>
+        <br></br>
+    </div>
+
+    <div class="updateCatalog">
+        <label for="selectCatalogUpdate">Choose Catalog:</label>
+        <select class="selectCatalogUpdate" id="selectCatalogUpdate">
+        </select>
+        <br></br>
+        <label for="updateCatalogInput">New Catalog name:</label>
+        <input type="text" id="updateCatalogInput" name="updateCatalogInput">
+        <br></br>
+        <label for="updateCatalogDescriptionInput">New Catalog description:</label>
+        <input type="text" id="updateCatalogDescriptionInput" name="updateCatalogDescriptionInput">
+        <br></br>
+        <label for="newSelectCatalogUpdate">New Parent Catalog:</label>
+        <select class="newSelectCatalogUpdate" id="newSelectCatalogUpdate">
+        </select>
+        <br></br>
+        <button type="button" onclick="updateCatalogRequest()">Update Catalog Request</button>
+        <br></br>
+    </div>
+
+    <div class="deleteCatalog">
+        <label for="selectCatalogDelete">Choose Catalog:</label>
+        <select class="selectCatalogDelete" id="selectCatalogDelete">
+        </select>
+        <br></br>
+        <button type="button" onclick="deleteCatalogRequest()">Delete Catalog Request</button>
+    </div>
+
+    <script src="../JS/Catalog.js"></script>
+    <script src="../JS/Navigation.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/createRow.js"></script>
+
+</body>
+
+</html>

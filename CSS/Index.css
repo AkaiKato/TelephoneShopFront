@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+.subTableCity, .subTableCost {
+    border: 0px;
+}
+
+.subTr{
+    border: 0px;
+}
+
+.subTd{
+    border: 0px;
+}
+
+.createCity, .updateCity, .deleteCity,
+.createCatalog, .updateCatalog, .deleteCatalog,
+.createTelephone, .updateTelephone, .deleteTelephone, .addCityToTelephone, .deleteCityFromTelephone{
+    display: none;
+}
+

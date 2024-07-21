@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <title>TelephoneShop!</title>
+    <link rel="stylesheet" href="../CSS/Index.css">
+</head>
+
+<body>
+    <button type="button" onclick="toCity()">Cities</button>
+    <button type="button" onclick="toCatalog()">Catalogs</button>
+    <br></br>        
+    <button type="button" onclick="changeVisibilityTelephone('create')">Create Telephone</button>
+    <button type="button" onclick="changeVisibilityTelephone('update')">Update Telephone</button>
+    <button type="button" onclick="changeVisibilityTelephone('addCity')">Add City To Telephone</button>
+    <button type="button" onclick="changeVisibilityTelephone('delete')">Delete Telephone</button>
+    <button type="button" onclick="changeVisibilityTelephone('deleteCity')">Delete City From Telephone</button>
+    <br></br>
+    <table class="mainTable">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Catalog Name</th>
+            <th>Sity</th>
+            <th>Cost</th>
+        </tr>
+    </table>
+
+    <br></br>
+
+    <div class="createTelephone">
+        <label for="createTelephoneInput">Telephone Name:</label>
+        <input type="text" id="createTelephoneInput" name="createTelephoneInput">
+        <br></br>
+        <label for="createTelephoneDescriptionInput">Telephone Description:</label>
+        <input type="text" id="createTelephoneDescriptionInput" name="createTelephoneDescriptionInput">
+        <br></br>
+        <label for="newSelectTelephoneCatalogCreate">Telephone Catalog:</label>
+        <select class="newSelectTelephoneCatalogCreate" id="newSelectTelephoneCatalogCreate">
+        </select>
+        <br></br>
+
+        <label for="newSelectTelephoneCityCreate">Telephone City:</label>
+        <select class="newSelectTelephoneCityCreate" id="newSelectTelephoneCityCreate">
+        </select>
+
+        <label for="newSelectTelephoneCityCostCreate">cost:</label>
+        <input type="number" id="newSelectTelephoneCityCostCreate" name="newSelectTelephoneCityCostCreate">
+        <br></br>
+
+        <button type="button" onclick="createTelephoneRequest()">Create Telephone Request</button>
+        <br></br>
+    </div>
+
+    <div class="addCityToTelephone">
+        <label for="addCityToTelephoneUpdate">Choose Telephone:</label>
+        <select class="addCityToTelephoneUpdate" id="addCityToTelephoneUpdate">
+        </select>
+        <br></br>
+
+        <label for="addCityToTelephoneSelect">City:</label>
+        <select class="addCityToTelephoneSelect" id="addCityToTelephoneSelect">
+        </select>
+        
+        <label for="addCityToTelephoneCosts">cost:</label>
+        <input type="number" id="addCityToTelephoneCosts" name="addCityToTelephoneCosts">
+        </select>
+        <br></br>
+
+        <button type="button" onclick="addCityTelephoneRequest()">Add City To Telephone Request</button>
+        <br></br>
+    </div>
+
+    <div class="updateTelephone">
+        <label for="selectTelephoneUpdate">Choose Telephone:</label>
+        <select class="selectTelephoneUpdate" id="selectTelephoneUpdate" onchange="dynamicCityCost()">
+            <option value="null"></option>
+        </select>
+        <br></br>
+
+        <label for="updateTelephoneInput">New Telephone name:</label>
+        <input type="text" id="updateTelephoneInput" name="updateTelephoneInput">
+        <br></br>
+
+        <label for="updateTelephoneDescriptionInput">New Telephone description:</label>
+        <input type="text" id="updateTelephoneDescriptionInput" name="updateTelephoneDescriptionInput">
+        <br></br>
+
+        <label for="newSelectTelephoneCatalogUpdate">New Telephone Catalog:</label>
+        <select class="newSelectTelephoneCatalogUpdate" id="newSelectTelephoneCatalogUpdate">
+        </select>
+        <br></br>
+
+        <div class="dynamicCityCost">
+        </div>
+        <button type="button" onclick="updateTelephoneRequest()">Update Telephone Request</button>
+        <br></br>
+    </div>
+
+    <div class="deleteTelephone">
+        <label for="selectTelephoneDelete">Choose Telephone:</label>
+        <select class="selectTelephoneDelete" id="selectTelephoneDelete">
+        </select>
+        <br></br>
+        <button type="button" onclick="deleteTelephoneRequest()">Delete Telephone Request</button>
+    </div>
+
+    <div class="deleteCityFromTelephone">
+        <label for="selectDeleteCityFromTelephone">Choose Telephone:</label>
+        <select class="selectDeleteCityFromTelephone" id="selectDeleteCityFromTelephone" onchange="setCities()">
+            <option value="null"></option>
+        </select>
+        <br></br>
+
+        <label for="selectDeleteCityFromCity">City:</label>
+        <select class="selectDeleteCityFromCity" id="selectDeleteCityFromCity">
+        </select>
+        <br></br>
+
+        <button type="button" onclick="deleteCityTelephoneRequest()">Delete City From Telephone Request</button>
+        <br></br>
+    </div>
+
+    <script src="../JS/Index.js"></script>
+    <script src="../JS/Navigation.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/createRow.js"></script>
+
+</body>
+
+</html>
